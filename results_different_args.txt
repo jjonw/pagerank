@@ -1,0 +1,85 @@
+Results from pagerank using different arguments.
+
+teleport_prob = 0.1
+error_acceptable = 0.001
+
+========= Use current iteraction (python main.py)
+### Iteration  6
+### Error:  0.0003811948328036191
+Node:  page_a  -> PR:  0.0356817101942279
+Node:  page_b  -> PR:  0.05628020584147178
+Node:  page_c  -> PR:  0.04199275929532897
+Node:  page_d  -> PR:  0.083389500978227
+Node:  page_e  -> PR:  0.016666666666666666
+Node:  page_f  -> PR:  0.016666666666666666
+Sum of PR values:  0.250677509642589
+
+
+========= Use last iteraction (python main.py -l)
+### Iteration  6
+### Error:  1.3877787807814457e-17
+Node:  page_a  -> PR:  0.03961572916666667
+Node:  page_b  -> PR:  0.06535666666666666
+Node:  page_c  -> PR:  0.057148854166666666
+Node:  page_d  -> PR:  0.10259791666666666
+Node:  page_e  -> PR:  0.016666666666666666
+Node:  page_f  -> PR:  0.016666666666666666
+Sum of PR values:  0.2980525
+
+
+========= Use current iteraction and normalize (python main.py -n)
+### Iteration  6
+### Error:  0.0003811948328036191
+Node:  page_a  -> PR:  0.14234109093034383
+Node:  page_b  -> PR:  0.22451238613992527
+Node:  page_c  -> PR:  0.1675170594889083
+Node:  page_d  -> PR:  0.33265649198893865
+Node:  page_e  -> PR:  0.06648648572594194
+Node:  page_f  -> PR:  0.06648648572594194
+Sum of PR values:  1.0
+
+
+========= Use last iteraction and normalize (python main.py -l -n)
+### Iteration  6
+### Error:  1.3877787807814457e-17
+Node:  page_a  -> PR:  0.13291527219757146
+Node:  page_b  -> PR:  0.21927904200322648
+Node:  page_c  -> PR:  0.19174089855534399
+Node:  page_d  -> PR:  0.34422766682603456
+Node:  page_e  -> PR:  0.05591856020891174
+Node:  page_f  -> PR:  0.05591856020891174
+Sum of PR values:  0.9999999999999999
+
+
+========= Use current iteraction and correct dangling nodes (python main.py -c)
+### Iteration  15
+### Error:  0.0007885955931774546
+Node:  page_a  -> PR:  0.1511724666106209
+Node:  page_b  -> PR:  0.23867197050091754
+Node:  page_c  -> PR:  0.17817255951945343
+Node:  page_d  -> PR:  0.29978643844778835
+Node:  page_e  -> PR:  0.07062822558726857
+Node:  page_f  -> PR:  0.07062822558726857
+Sum of PR values:  1.0090598862533173
+
+
+========= Use last iteraction and correct dangling nodes (python main.py -l -c)
+### Iteration  13
+### Error:  0.0006241398558795574
+Node:  page_a  -> PR:  0.14969807830335982
+Node:  page_b  -> PR:  0.2362784530568191
+Node:  page_c  -> PR:  0.17655871951338337
+Node:  page_d  -> PR:  0.2969902392977851
+Node:  page_e  -> PR:  0.07023725491432631
+Node:  page_f  -> PR:  0.07023725491432631
+Sum of PR values:  1.0
+
+
+=========================================================================
+========= Result from Networkx library: networknx.pagerank(gr, alpha=0.9) ### alpha = 1 - teleport_probability
+'page_a': 0.14200174758180167 
+'page_b': 0.22436640252779066 
+'page_c': 0.16756293612056544 
+'page_d': 0.33287342897720784 
+'page_e': 0.06659774239631716
+'page_f': 0.06659774239631716
